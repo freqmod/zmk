@@ -224,6 +224,7 @@ bool zmk_hid_mod_is_pressed(zmk_mod_t modifier);
 
 int zmk_hid_register_mods(zmk_mod_flags_t explicit_modifiers);
 int zmk_hid_unregister_mods(zmk_mod_flags_t explicit_modifiers);
+int zmk_hid_implicit_modifiers_clear_press(zmk_mod_flags_t implicit_modifiers);
 int zmk_hid_implicit_modifiers_press(zmk_mod_flags_t implicit_modifiers);
 int zmk_hid_implicit_modifiers_release();
 int zmk_hid_masked_modifiers_set(zmk_mod_flags_t masked_modifiers);

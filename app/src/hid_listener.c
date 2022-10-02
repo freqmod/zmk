@@ -26,7 +26,11 @@ static int hid_listener_keycode_pressed(const struct zmk_keycode_state_changed *
         return err;
     }
     explicit_mods_changed = zmk_hid_register_mods(ev->explicit_modifiers);
-    implicit_mods_changed = zmk_hid_implicit_modifiers_press(ev->implicit_modifiers);
+    if(ev->clearmod) {
+        implicit_mods_changed = zmk_hid_implicit_modifiers_clear_press(ev->implicit_modifiers);
+    } else {
+        implicit_mods_changed = zmk_hid_implicit_modifiers_press(ev->implicit_modifiers);
+    }
     if (ev->usage_page != HID_USAGE_KEY &&
         (explicit_mods_changed > 0 || implicit_mods_changed > 0)) {
         err = zmk_endpoints_send_report(HID_USAGE_KEY);

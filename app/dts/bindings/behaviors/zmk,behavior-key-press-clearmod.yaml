@@ -1,0 +1,8 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+description: Key press/release with cleared modifiers behavior 
+
+compatible: "zmk,behavior-key-press-clearmod"
+
+include: one_param.yaml

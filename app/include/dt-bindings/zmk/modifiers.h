@@ -18,6 +18,7 @@
 #define STRIP_MODS(keycode) (keycode & ~(0xFF << 24))
 #define APPLY_MODS(mods, keycode) (mods << 24 | keycode)
 
+#define SM(keycode) STRIP_MODS(keycode)
 #define LC(keycode) APPLY_MODS(MOD_LCTL, keycode)
 #define LS(keycode) APPLY_MODS(MOD_LSFT, keycode)
 #define LA(keycode) APPLY_MODS(MOD_LALT, keycode)
