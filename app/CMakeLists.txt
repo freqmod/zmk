@@ -40,6 +40,7 @@ if ((NOT CONFIG_ZMK_SPLIT) OR CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
   target_sources_ifdef(CONFIG_ZMK_USB app PRIVATE src/usb_hid.c)
   
   target_sources(app PRIVATE src/behaviors/behavior_key_press.c)
+  target_sources(app PRIVATE src/behaviors/behavior_key_press_clearmod.c)
   target_sources_ifdef(CONFIG_ZMK_BEHAVIOR_KEY_TOGGLE app PRIVATE src/behaviors/behavior_key_toggle.c)
   target_sources(app PRIVATE src/behaviors/behavior_hold_tap.c)
   target_sources(app PRIVATE src/behaviors/behavior_sticky_key.c)

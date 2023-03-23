@@ -24,7 +24,7 @@ static int on_keymap_binding_pressed(struct zmk_behavior_binding *binding,
     LOG_DBG("position %d keycode 0x%02X", event.position, binding->param1);
     bool pressed = zmk_hid_is_pressed(binding->param1);
     return ZMK_EVENT_RAISE(
-        zmk_keycode_state_changed_from_encoded(binding->param1, !pressed, event.timestamp));
+        zmk_keycode_state_changed_from_encoded(binding->param1, !pressed, false, event.timestamp));
 }
 
 static int on_keymap_binding_released(struct zmk_behavior_binding *binding,

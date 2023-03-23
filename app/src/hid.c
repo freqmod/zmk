@@ -281,6 +281,16 @@ int zmk_hid_masked_modifiers_clear() {
     return current == GET_MODIFIERS ? 0 : 1;
 }
 
+int zmk_hid_implicit_modifiers_clear_press(zmk_mod_flags_t implicit_modifiers) {
+    zmk_mod_flags_t current = GET_MODIFIERS;
+
+    // Cannot use SET_MODIFIERS here as mod morph does not allow us to clear implicit modifiers
+    keyboard_report.body.modifiers = (explicit_modifiers & ~masked_modifiers) & ~implicit_modifiers;
+    LOG_DBG("Modifiers set to 0x%02X", keyboard_report.body.modifiers);
+
+    return current == GET_MODIFIERS ? 0 : 1;
+}
+
 int zmk_hid_keyboard_press(zmk_key_t code) {
     if (code >= HID_USAGE_KEY_KEYBOARD_LEFTCONTROL && code <= HID_USAGE_KEY_KEYBOARD_RIGHT_GUI) {
         return zmk_hid_register_mod(code - HID_USAGE_KEY_KEYBOARD_LEFTCONTROL);
