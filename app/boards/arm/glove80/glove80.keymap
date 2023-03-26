@@ -88,7 +88,7 @@
        };
        combo_mac_aa {
            timeout-ms = <50>;
-           key-positions = <23 35>;
+           key-positions = <24 35>;
            layers = <COLEMAK_MAC>;
            bindings = <&kp LA(A)>;
        };
@@ -396,11 +396,11 @@
         default_layer {
             bindings = <
                 &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                         &kp F6   &kp F7      &kp F8      &kp F9      &kp F10
-                &none          &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7   &kp N8      &kp N9      &kp N0      &none
+                &kp F11        &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7   &kp N8      &kp N9      &kp N0      &kp F12
                 &kp ESC        &kp Q    &kp W       &kp F       &kp P       &kp G                                                                      &kp J   &kp L    &kp U       &kp Y       &kp SEMI    &kp LALT
                 &kp LSHFT      &kp A    &kp R       &kp S       &kp T       &kp D                                                                      &kp H   &kp N    &kp E       &kp I       &kp O       &kp RSHFT
-                &kp LCTRL      &kp Z    &kp X       &kp C       &kp V       &kp B   &mo MOUSE   &mo LOWER   &kp RALT  &kp LBKT  &kp RBKT   &kp BSPC    &kp K   &kp M    &kp COMMA   &kp DOT     &kp FSLH    &kp SQT
-                &kp LCTRL      &kp LEFT &kp DOWN    &kp UP      &kp RIGHT           &kp SPACE   &mo LOWER   &kp LGUI  &kp LALT  &mo RAISE  &kp RET             &kp HOME &kp PG_DN   &kp PG_UP   &kp END     &kp RGUI
+                &kp LCTRL      &kp Z    &kp X       &kp C       &kp V       &kp B   &mo MOUSE   &mo LOWER   &kp RALT  &kp LBKT   &mo RAISE  &kp BSPC   &kp K   &kp M    &kp COMMA   &kp DOT     &kp FSLH    &kp SQT
+                &kp LCTRL      &kp LEFT &kp DOWN    &kp UP      &kp RIGHT           &kp SPACE   &mo LOWER   &kp LGUI  &kp RBKT   &kp LALT   &kp RET           &kp HOME &kp PG_DN   &kp PG_UP   &kp END     &kp RGUI
                 >;
         };
 
@@ -421,8 +421,8 @@
                 &none          &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7   &kp N8      &kp N9      &kp N0      &none 
                 &kp ESC        &kp Q    &kp W       &kp F       &kp P       &kp G                                                                      &kp J   &kp L    &kp U       &kp Y       &kp SEMI    &kp LALT
                 &kp LSHFT      &kp A    &kp R       &kp S       &kp T       &kp D                                                                      &kp H   &kp N    &kp E       &kp I       &kp O       &kp RSHFT
-                &trans         &kp Z    &kp X       &kp C       &kp V       &kp B   &mo MOUSE   &none       &kp RALT  &kp LBKT  &kp RBKT   &kp RSHFT   &kp K   &kp M    &kp COMMA   &kp DOT     &kp FSLH    &kp SQT
-                &trans         &kp LEFT &kp DOWN    &kp UP      &kp RIGHT           &kp SPACE   &mo LOWER   &kp LGUI  &kp LALT  &mo RAISE  &kp RET             &kp HOME &kp PG_DN   &kp PG_UP   &kp END     &kp RGUI
+                &trans         &kp Z    &kp X       &kp C       &kp V       &kp B   &trans      &trans      &trans    &trans    &trans     &trans      &kp K   &kp M    &kp COMMA   &kp DOT     &kp FSLH    &kp SQT
+                &trans         &kp LEFT &kp DOWN    &kp UP      &kp RIGHT           &trans      &trans      &trans    &trans    &trans     &trans              &kp HOME &kp PG_DN   &kp PG_UP   &kp END     &kp RGUI
                 >;
         };
 
@@ -432,8 +432,8 @@
                 &kp F12        &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7   &kp N8      &kp N9      &kp N0      &kp F11 
                 &kp ESC        &kp Q    &kp W       &kp F       &kp P       &kp G                                                                      &kp J   &kp L    &kp U       &kp Y       &kp SEMI    &kp LALT
                 &kp LSHFT      &kp A    &kp R       &kp S       &kp T       &kp D                                                                      &kp H   &kp N    &kp E       &kp I       &kp O       &kp RSHFT
-                &trans         &kp Z    &kp X       &kp C       &kp V       &kp B   &mo MOUSE   &none       &kp RALT  &kp LBKT  &kp RBKT   &kp RSHFT   &kp K   &kp M    &kp COMMA   &kp DOT     &kp FSLH    &kp SQT
-                &trans         &kp LEFT &kp DOWN    &kp UP      &kp RIGHT           &kp SPACE   &mo LOWER   &kp LGUI  &kp LALT  &mo RAISE  &kp RET             &kp HOME &kp PG_DN   &kp PG_UP   &kp END     &kp RGUI
+                &trans         &kp Z    &kp X       &kp C       &kp V       &kp B   &trans      &trans      &trans    &trans    &trans     &trans      &kp K   &kp M    &kp COMMA   &kp DOT     &kp FSLH    &kp SQT
+                &trans         &kp LEFT &kp DOWN    &kp UP      &kp RIGHT           &trans      &trans      &trans    &trans    &trans     &trans              &kp HOME &kp PG_DN   &kp PG_UP   &kp END     &kp RGUI
                 >;
         };
 
@@ -443,8 +443,8 @@
                 &trans         &trans   &trans      &trans      &trans      &trans                                                                                &trans        &trans   &trans    &trans           &trans          &trans
                 &mt LGUI GRAVE &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                                &kp N6        &kp N7   &kp N8    &kp N9           &kp N0          &none
                 &kp CAPS       &kp LEFT &kp DOWN    &kp UP      &kp RIGHT   &kp LC(BSPC)                                                                          &kp MINUS     &kp DQT  &kp EQUAL &kp LT           &kp GT          &none
-                &trans         &kp HOME &kp PG_DN   &kp PG_UP   &kp END     &kp LC(DEL)   &rgb_ug_status_macro &trans &trans     &trans    &trans     &kp DEL     &kp LA(LSHFT) &sk RALT &none     &none            &none           &kp BSLH
-                &trans         &trans   &trans      &trans      &trans                    &trans      &trans      &trans         &trans    &trans     &trans                    &trans   &trans    &trans           &trans          &trans
+                &trans         &kp HOME &kp PG_DN   &kp PG_UP   &kp END     &kp LC(DEL)   &rgb_ug_status_macro &trans &trans     &trans    &trans     &kp DEL     &kp LA(LSHFT) &sk RALT &none     &kp K_PREV       &kp K_NEXT      &kp BSLH
+                &trans         &trans   &trans      &trans      &trans                    &trans      &trans      &trans         &trans    &trans     &trans                    &trans   &trans    &kp K_STOP       &kp K_PP        &trans
                 >;
         };
 
